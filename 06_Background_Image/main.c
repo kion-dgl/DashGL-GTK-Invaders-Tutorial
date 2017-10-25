@@ -9,13 +9,15 @@ static void on_render(GtkGLArea *area, GdkGLContext *context);
 #define HEIGHT 480.0f
 
 GLuint program;
-GLuint vao, vbo_triangle;
-GLint attribute_coord2d;
+GLuint vao, vbo_triangle, texture_id;
+GLint attribute_texcoord, attribute_coord2d;
+GLint uniform_mytexture;
 
 int main(int argc, char *argv[]) {
 
 	GtkWidget *window;
 	GtkWidget *glArea;
+
 
 	gtk_init(&argc, &argv);
 
@@ -50,7 +52,7 @@ static void on_realize(GtkGLArea *area) {
 
 	// Debug Message
 
-	g_print("on realize\n");
+	g_print("on realize     0\n");
 
 	gtk_gl_area_make_current(area);
 	if(gtk_gl_area_get_error(area) != NULL) {
@@ -58,28 +60,42 @@ static void on_realize(GtkGLArea *area) {
 		return;
 	}
 
+	g_print("next\n");
+
+	
+	g_print("Before glew init\n");
+
 	glewExperimental = GL_TRUE;
 	glewInit();
+
+	g_print("After glew init\n");
 
 	const GLubyte *renderer = glGetString(GL_RENDER);
 	const GLubyte *version = glGetString(GL_VERSION);
 
-	printf("Renderer: %s\n", renderer);
-	printf("OpenGL version supported %s\n", version);
+	g_print("Renderer: %s\n", renderer);
+	g_print("OpenGL version supported %s\n", version);
 
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
+	g_print("Gen array\n");
+
 	glGenVertexArrays(1, &vao);
+	
+	g_print("Bind array\n");
+
 	glBindVertexArray(vao);
 
+	g_print("Triangle verticles\n");
+
 	GLfloat triangle_vertices[] = {
-		0.0, 0.0,
-		0.0, HEIGHT,
-		WIDTH, HEIGHT,
+		0.0, 0.0, 0.0, 0.0, 
+		0.0, HEIGHT, 0.0, 1.0,
+		WIDTH, HEIGHT, 1.0, 1.0,
 		
-		0.0, 0.0,
-		WIDTH, HEIGHT,
-		WIDTH, 0.0
+		0.0, 0.0, 0.0, 0.0,
+		WIDTH, HEIGHT, 1.0, 1.0,
+		WIDTH, 0.0, 1.0, 0.0
 	};
 	
 	glGenBuffers(1, &vbo_triangle);
@@ -99,6 +115,10 @@ static void on_realize(GtkGLArea *area) {
 
 	program = shader_load_program(vs, fs);
 
+	g_print("Loading texture file:\n");
+	texture_id = shader_load_texture("sprite/background.png");
+	g_print("End loading texture\n");
+
 	const char *attribute_name = "coord2d";
 	attribute_coord2d = glGetAttribLocation(program, attribute_name);
 	if(attribute_coord2d == -1) {
@@ -106,9 +126,23 @@ static void on_realize(GtkGLArea *area) {
 		return;
 	}
 
+	attribute_name = "uv_coord";
+	attribute_texcoord = glGetAttribLocation(program, attribute_name);
+	if(attribute_texcoord == -1) {
+		fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+		return;
+	}
+
 	const char *uniform_name = "orthograph";
 	GLint uniform_ortho = glGetUniformLocation(program, uniform_name);
 	if(uniform_ortho == -1) {
+		fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
+		return;
+	}
+
+	uniform_name = "mytexture";
+	uniform_mytexture = glGetUniformLocation(program, uniform_name);
+	if(uniform_mytexture == -1) {
 		fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
 		return;
 	}
@@ -129,8 +163,13 @@ static void on_render(GtkGLArea *area, GdkGLContext *context) {
 
 	glUseProgram(program);
 
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, texture_id);
+	glUniform1i(uniform_mytexture, 0);
+
 	glBindVertexArray(vao);
 	glEnableVertexAttribArray(attribute_coord2d);
+	glEnableVertexAttribArray(attribute_texcoord);
 
 	glBindBuffer(GL_ARRAY_BUFFER, vbo_triangle);
 	glVertexAttribPointer(
@@ -138,8 +177,17 @@ static void on_render(GtkGLArea *area, GdkGLContext *context) {
 		2,
 		GL_FLOAT,
 		GL_FALSE,
-		0,
+		sizeof(float) * 4,
 		0
+	);
+
+	glVertexAttribPointer(
+		attribute_texcoord,
+		2,
+		GL_FLOAT,
+		GL_FALSE,
+		sizeof(float) * 4,
+		(void*)(sizeof(float) * 2)
 	);
 
 	glDrawArrays(GL_TRIANGLES, 0, 6);
