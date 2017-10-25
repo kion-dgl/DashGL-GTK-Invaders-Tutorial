@@ -116,7 +116,7 @@ static void on_realize(GtkGLArea *area) {
 	program = shader_load_program(vs, fs);
 
 	g_print("Loading texture file:\n");
-	texture_id = shader_load_texture("sprite/background.png");
+	texture_id = shader_load_texture("sprites/background.png");
 	g_print("End loading texture\n");
 
 	const char *attribute_name = "coord2d";
