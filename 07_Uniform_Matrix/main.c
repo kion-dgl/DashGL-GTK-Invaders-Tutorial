@@ -8,14 +8,15 @@ static void on_render(GtkGLArea *area, GdkGLContext *context);
 #define WIDTH 640.0f
 #define HEIGHT 480.0f
 
-GLuint program, vao;
+GLuint program;
+GLuint vao;
 GLint attribute_texcoord, attribute_coord2d;
-GLint uniform_mvp, uniform_mytexture;
+GLint uniform_mytexture, uniform_mvp;
 
 struct {
-	mat4 mvp;
 	GLuint vbo;
-	GLint tex;
+	GLuint tex;
+	mat4 mvp;
 } background;
 
 int main(int argc, char *argv[]) {
@@ -64,15 +65,8 @@ static void on_realize(GtkGLArea *area) {
 		return;
 	}
 
-	g_print("next\n");
-
-	
-	g_print("Before glew init\n");
-
 	glewExperimental = GL_TRUE;
 	glewInit();
-
-	g_print("After glew init\n");
 
 	const GLubyte *renderer = glGetString(GL_RENDER);
 	const GLubyte *version = glGetString(GL_VERSION);
@@ -81,7 +75,7 @@ static void on_realize(GtkGLArea *area) {
 	g_print("OpenGL version supported %s\n", version);
 
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-	
+
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 
@@ -103,19 +97,16 @@ static void on_realize(GtkGLArea *area) {
 		background_vertices,
 		GL_STATIC_DRAW
 	);
+	
 	mat4_identity(background.mvp);
-
+	background.tex = shader_load_texture("sprites/background.png");
+	
 	GLint compile_ok = GL_FALSE;
 	GLint link_ok = GL_FALSE;
 
 	const char *vs = "shader/vertex.glsl";
 	const char *fs = "shader/fragment.glsl";
-
 	program = shader_load_program(vs, fs);
-
-	g_print("Loading texture file:\n");
-	background.tex = shader_load_texture("sprites/background.png");
-	g_print("End loading texture\n");
 
 	const char *attribute_name = "coord2d";
 	attribute_coord2d = glGetAttribLocation(program, attribute_name);
@@ -139,7 +130,7 @@ static void on_realize(GtkGLArea *area) {
 	}
 
 	uniform_name = "mvp";
-	GLint uniform_mvp = glGetUniformLocation(program, uniform_name);
+	uniform_mvp = glGetUniformLocation(program, uniform_name);
 	if(uniform_mvp == -1) {
 		fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
 		return;
@@ -165,6 +156,7 @@ static void on_render(GtkGLArea *area, GdkGLContext *context) {
 	g_print("on render\n");
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 	glUseProgram(program);
 
 	glActiveTexture(GL_TEXTURE0);

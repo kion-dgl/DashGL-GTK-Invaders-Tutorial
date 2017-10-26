@@ -7,6 +7,6 @@ attribute vec2 uv_coord;
 varying vec2 texcoord;
 
 void main (void) {
-	gl_Position = orthograph * vec4(coord2d, 0.0, 1.0);
+	gl_Position = orthograph * mvp * vec4(coord2d, 0.0, 1.0);
 	texcoord = uv_coord;
 }
