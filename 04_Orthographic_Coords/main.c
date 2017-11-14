@@ -1,4 +1,5 @@
-#include <GL/glew.h>
+#include <epoxy/gl.h>
+#include <epoxy/glx.h>
 #include <gtk/gtk.h>
 #include "DashGL/dashgl.h"
 

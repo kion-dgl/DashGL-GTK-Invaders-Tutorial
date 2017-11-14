@@ -1,4 +1,5 @@
-#include <GL/glew.h>
+#include <epoxy/gl.h>
+#include <epoxy/glx.h>
 #include <gtk/gtk.h>
 #include "DashGL/dashgl.h"
 
@@ -17,7 +18,6 @@ int main(int argc, char *argv[]) {
 
 	GtkWidget *window;
 	GtkWidget *glArea;
-
 
 	gtk_init(&argc, &argv);
 
@@ -60,16 +60,6 @@ static void on_realize(GtkGLArea *area) {
 		return;
 	}
 
-	g_print("next\n");
-
-	
-	g_print("Before glew init\n");
-
-	glewExperimental = GL_TRUE;
-	glewInit();
-
-	g_print("After glew init\n");
-
 	const GLubyte *renderer = glGetString(GL_RENDER);
 	const GLubyte *version = glGetString(GL_VERSION);
 
@@ -78,15 +68,9 @@ static void on_realize(GtkGLArea *area) {
 
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
-	g_print("Gen array\n");
 
 	glGenVertexArrays(1, &vao);
-	
-	g_print("Bind array\n");
-
 	glBindVertexArray(vao);
-
-	g_print("Triangle verticles\n");
 
 	GLfloat triangle_vertices[] = {
 		0.0, 0.0, 0.0, 0.0, 
@@ -115,9 +99,7 @@ static void on_realize(GtkGLArea *area) {
 
 	program = shader_load_program(vs, fs);
 
-	g_print("Loading texture file:\n");
 	texture_id = shader_load_texture("sprites/background.png");
-	g_print("End loading texture\n");
 
 	const char *attribute_name = "coord2d";
 	attribute_coord2d = glGetAttribLocation(program, attribute_name);

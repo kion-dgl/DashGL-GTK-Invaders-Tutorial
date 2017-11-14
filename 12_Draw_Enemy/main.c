@@ -1,5 +1,6 @@
 #include <stdlib.h>
-#include <GL/glew.h>
+#include <epoxy/gl.h>
+#include <epoxy/glx.h>
 #include <gtk/gtk.h>
 #include "DashGL/dashgl.h"
 
@@ -16,7 +17,6 @@ GLuint program;
 GLuint vao;
 GLint attribute_texcoord, attribute_coord2d;
 GLint uniform_mytexture, uniform_mvp;
-
 
 struct {
 	GLuint vbo;
@@ -98,9 +98,6 @@ static void on_realize(GtkGLArea *area) {
 		fprintf(stderr, "Unknown error\n");
 		return;
 	}
-
-	glewExperimental = GL_TRUE;
-	glewInit();
 
 	const GLubyte *renderer = glGetString(GL_RENDER);
 	const GLubyte *version = glGetString(GL_VERSION);

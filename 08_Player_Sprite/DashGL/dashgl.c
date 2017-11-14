@@ -28,7 +28,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <GL/glew.h>
+#include <epoxy/gl.h>
+#include <epoxy/glx.h>
 #include "dashgl.h"
 
 /**********************************************************************/
