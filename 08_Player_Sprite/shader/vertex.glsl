@@ -1,4 +1,4 @@
-#version 130
+#version 120
 
 uniform mat4 orthograph;
 uniform mat4 mvp;
