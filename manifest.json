@@ -1,0 +1,24 @@
+{
+  "nickname" : "Kion",
+  "author" : "Benjamin Collins",
+  "email" : "kion@dashgl.com",
+  "language" : "c",
+  "window_library" : "gtk",
+  "graphics_library" : "opengl 3.0",
+  "title" : "Gtk Invaders",
+  "repository" : "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial",
+  "card-image" : "https://repository-images.githubusercontent.com/107547411/7a78fb40-6ba0-4648-9c18-d820f939a276",
+  "support" : {
+    "liberapay" : "https://en.liberapay.com/DashGLProject/",
+    "patron" : "https://www.patreon.com/dashkion",
+    "ko-fi" : "https://ko-fi.com/dashgl0937"
+  },
+  "social" : {
+    "mastodon" : "https://linuxrocks.online/@kion",
+    "twitter" : "https://twitter.com/kion_dgl",
+    "reddit" : "https://www.reddit.com/user/kion_dgl"
+  },
+  "lessons" : [
+
+  ]
+}
