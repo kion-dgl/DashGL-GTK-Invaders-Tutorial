@@ -22,134 +22,134 @@
     {
       "index" : 0,
       "title" : "Introduction",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837331-72559407-a951-463e-a25b-f0b2657ebd3c.png"
     },
     {
       "index" : 1,
       "title" : "Open a Window",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/01_Open_A_Window/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/01_Open_A_Window",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837267-c15a169a-4a2f-4d65-8794-d8d5fe2c6385.png"
     },
     {
       "index" : 2,
       "title" : "Draw a Triangle",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/02_Draw_A_Triangle/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/02_Draw_A_Triangle",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837272-ed2b2389-18f4-43c8-b385-1378b8e80796.png"
     },
     {
       "index" : 3,
       "title" : "Shader Program",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/03_Shader_Program/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/03_Shader_Program",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837273-86532727-15ee-47bd-9ac6-f99565796b3e.png"
     },
     {
       "index" : 4,
       "title" : "Orthographic Coordinates",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/04_Orthographic_Coords/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/04_Orthographic_Coords",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837275-d2d3551b-6803-4d6f-9c43-0ca6676c184e.png"
     },
     {
       "index" : 5,
-      "title" : "Cover Background",
-      "readme" : "",
-      "source" :  "",
+      "title" : "Draw Background",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/05_Draw_Background/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/05_Draw_Background",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837277-912950c0-7b6b-4750-b711-50c8bd1e5111.png"
     },
     {
       "index" : 6,
       "title" : "Background Sprite",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/06_Background_Image/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/06_Background_Image",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837283-41aaac48-b977-4a37-ba6d-b1f459389ba4.png"
     },
     {
       "index" : 7,
       "title" : "Matrix Uniform",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/07_Uniform_Matrix/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/07_Uniform_Matrix",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837286-59f57497-ad2e-41b2-a8ac-b811ad685270.png"
     },
     {
       "index" : 8,
       "title" : "Player Sprite",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/08_Player_Sprite/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/08_Player_Sprite",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837290-73926dd7-959e-47cb-9bbb-51de4e70ec89.png"
     },
     {
       "index" : 9,
       "title" : "Move Player Sprite",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/09_Move_Player/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/09_Move_Player",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837297-0ed8efc0-bc6d-40a7-b9da-63cb38b40e03.png"
     },
     {
       "index" : 10,
       "title" : "Draw Static Bullet",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/10_Draw_Bullet/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/10_Draw_Bullet",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837301-018d7420-7485-4a6e-84c4-ac163cd0d1f0.png"
     },
     {
       "index" : 11,
       "title" : "Shoot Player Bullets",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/11_Shoot_Bullet/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/11_Shoot_Bullet",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837307-a1dfd6ea-e800-4851-9fa1-e73a08277ef4.png"
     },
     {
       "index" : 12,
       "title" : "Draw Static Enemy",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/12_Draw_Enemy/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/12_Draw_Enemy",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837313-6100f8bf-4114-4002-85bc-e6473130f901.png"
     },
     {
       "index" : 13,
       "title" : "Draw Static Enemies",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/13_Draw_Enemies/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/13_Draw_Enemies",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837318-b397f414-c85c-4f7a-acc6-1bdc9a43539c.png"
     },
     {
       "index" : 14,
       "title" : "Move Enemies",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/14_Move_Enemies/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/14_Move_Enemies",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837320-7cabd030-71af-4cd9-a8e9-661f82be0a4b.png"
     },
     {
       "index" : 15,
       "title" : "Enemy Hit Detection",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/15_Shoot_Enemies/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/15_Shoot_Enemies",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837322-76dae7e6-0a53-441d-a88c-204348b62446.png"
     },
     {
       "index" : 16,
       "title" : "Enemies Shoot Back",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/16_Enemies_Shoot_Back/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/16_Enemies_Shoot_Back",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837326-7990a2eb-9629-4f7c-818a-c998324c564b.png"
     },
     {
       "index" : 17,
       "title" : "Player Hit Detection",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/17_Player_Hit_Detect/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/17_Player_Hit_Detect",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837331-72559407-a951-463e-a25b-f0b2657ebd3c.png"
     },
     {
       "index" : 18,
       "title" : "Gameover and Restart",
-      "readme" : "",
-      "source" :  "",
+      "readme" : "https://raw.githubusercontent.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/master/18_Gameover_Screen/README.md",
+      "source" :  "https://github.com/kion-dgl/DashGL-GTK-Invaders-Tutorial/tree/master/18_Gameover_Screen",
       "featured-image" : "https://user-images.githubusercontent.com/25621780/128837340-ecfe345c-1eeb-4bae-818e-15fbcc3c2b65.png"
     }
   ]
