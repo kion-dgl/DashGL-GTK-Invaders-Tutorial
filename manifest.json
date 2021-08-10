@@ -19,6 +19,138 @@
     "reddit" : "https://www.reddit.com/user/kion_dgl"
   },
   "lessons" : [
-
+    {
+      "index" : 0,
+      "title" : "Introduction",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 1,
+      "title" : "Open a Window",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 2,
+      "title" : "Draw a Triangle",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 3,
+      "title" : "Shader Program",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 4,
+      "title" : "Orthographic Coordinates",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 5,
+      "title" : "Cover Background",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 6,
+      "title" : "Background Sprite",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 7,
+      "title" : "Matrix Uniform",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 8,
+      "title" : "Player Sprite",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 9,
+      "title" : "Move Player Sprite",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 10,
+      "title" : "Draw Static Bullet",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 11,
+      "title" : "Shoot Player Bullets",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 12,
+      "title" : "Draw Static Enemy",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 13,
+      "title" : "Draw Static Enemies",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 14,
+      "title" : "Move Enemies",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 15,
+      "title" : "Enemy Hit Detection",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 16,
+      "title" : "Enemies Shoot Back",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 17,
+      "title" : "Player Hit Detection",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    },
+    {
+      "index" : 18,
+      "title" : "Gameover and Restart",
+      "readme" : "",
+      "source" :  "",
+      "featured-image" : ""
+    }
   ]
 }
