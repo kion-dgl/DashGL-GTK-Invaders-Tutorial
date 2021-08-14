@@ -1,5 +1,6 @@
 {
   "id" : 1,
+  "description" : "In this tutorial we make an Invaders clone using the GTK window libary and OpenGL 3.0. For this turotial we focus on square 2D sprites to make a simple game.",
   "nickname" : "Kion",
   "author" : "Benjamin Collins",
   "avatar" : "https://avatars.githubusercontent.com/u/25621780",
